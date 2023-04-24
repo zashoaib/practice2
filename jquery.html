@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //click event
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(".test").hide();
+            });
+        });
+        //Mouse enter event
+
+        $(document).ready(function () {
+            $("#p1").mouseenter(function () {
+                console.log("Your mouse entered p1!");
+            });
+        });
+
+        //on mouse leave
+        $("#p1").mouseleave(function () {
+            console.log("Bye! Your mouse left p1!");
+        });
+        //on mouse down
+        $("#p1").mousedown(function () {
+            console.log("Mouse down over p1!");
+        });
+        //on mouse up
+        $("#p1").mouseup(function () {
+            console.log("Mouse up over p1!");
+        });
+        //hover 
+        $("#p1").hover(function () {
+            console.log("You hovered over p1!");
+        },
+            function () {
+                console.log("Bye! You now leave p1!");
+            });
+        //on focus event
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "green");
+            });
+        });
+        $(document).ready(function () {
+            $("#btn2").click(function () {
+                $("#ap").append(" <b>Appended text</b>.");
+            });
+
+            $("#btn3").click(function () {
+                $("ol").append("<li>Appended item</li>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2 class="test">This is a heading</h2>
+
+    <p class="test">This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p id="ap">parahgraph to append</p>
+
+    <button>Click me</button>
+    <p id="p1">Enter this paragraph.</p>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email"><br>
+
+
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn2">Append text</button>
+    <button id="btn3">Append list items</button>
+
+</body>
+
+</html>
